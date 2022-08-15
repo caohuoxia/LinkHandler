@@ -38,6 +38,13 @@ int main(int argc, const char * argv[]) {
 //    printf("最大股票收益为：%d\n",ret1);
     
     Node *head = readLink();
-    isHuiwen(head);
+    display_link(head);
+//    isHuiwen(head);
+//    printf("输入要删的数据：\n");
+//    int toDelete = 0;
+//    scanf("%d",&toDelete);
+//    deleteNode(head, toDelete);
+    deleteDup(head);
+    display_link(head);
     return 0;
 }

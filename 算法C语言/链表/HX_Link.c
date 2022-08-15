@@ -71,6 +71,49 @@ int isHuiwen(Node *head) {
     return 1;
 }
 
+Node *deleteNode(Node *head, int val) {
+    if (head == NULL || head->next == NULL) {
+        return NULL;
+    }
+    Node *temp = head->next, *pre = head;
+    // 第一个节点就是 要删除的节点
+    if (temp->data == val) {
+        head->next = temp->next;
+        free(temp);
+        return head;
+    }
+    while (temp!=NULL && pre!=NULL) {
+        if (temp->data == val) {
+            pre->next = temp->next;
+            free(temp);
+            break;
+        }
+        pre = temp;
+        temp = temp->next;
+    }
+    return head;
+}
+
+// 删除链表中重复的节点，例如1->2->3->3->5,删除重复的3节点之后 为1->2->5
+Node *deleteDup(Node *head) {
+    if (head == NULL || head->next == NULL) {
+        return NULL;
+    }
+    Node *curr = head->next, *pre = head;
+    while (curr->next!=NULL && pre!=NULL) {
+        int temp = curr->data;
+        if (curr->data == curr->next->data) { // 有相邻重复的
+            while (curr->next != NULL && curr->next->data == temp) {
+                curr->next = curr->next->next;
+            }
+            pre->next = curr->next;
+        }else {
+            pre = curr;
+            curr = curr->next;
+        }
+    }
+    return head;
+}
 
 // 读取升序链表
 Node *readLink() {
@@ -88,6 +131,7 @@ Node *readLink() {
     l->next = NULL;
     return head;
 }
+
 Node *mergeLink(Node *l1,Node *l2) {
     Node *head, *l;
     head=l= (Node*)malloc(sizeof(Node));

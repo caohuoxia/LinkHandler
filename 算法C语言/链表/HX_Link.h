@@ -49,6 +49,13 @@ Node *mergeLink(Node *l1,Node *l2);
 // 判断单链表是否为回文链表, 是返回1，不是返回0
 int isHuiwen(Node *head);
 
+// 删除链表中的某个节点,返回删除后链表head
+Node *deleteNode(Node *head, int val);
+
+// 删除链表中重复的节点
+Node *deleteDup(Node *head);
+
+
 // 调用入口
 void callMyMergeLink(void);
 void callReverseLink(void);
