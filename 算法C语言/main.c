@@ -20,6 +20,7 @@
 #include <stdio.h>
 #include "HX_Link.h"
 #include "./常用面试题/Questions.h"
+#include "./经典排序/Sort.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -37,14 +38,15 @@ int main(int argc, const char * argv[]) {
 //    int ret1 = maxProfit(shares, len);
 //    printf("最大股票收益为：%d\n",ret1);
     
-    Node *head = readLink();
-    display_link(head);
+//    Node *head = readLink();
+//    display_link(head);
 //    isHuiwen(head);
 //    printf("输入要删的数据：\n");
 //    int toDelete = 0;
 //    scanf("%d",&toDelete);
 //    deleteNode(head, toDelete);
-    deleteDup(head);
-    display_link(head);
+//    deleteDup(head);
+//    display_link(head);
+    sortCallEntry();
     return 0;
 }
