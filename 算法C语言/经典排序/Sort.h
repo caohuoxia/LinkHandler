@@ -18,7 +18,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//  全局存储数组的长度
+//  全局存储数组的长度 或者用入参 带出size，此时注意要用指针
 static int ArrayLength = 0;
 
 //int *quickSort(int *arr, int left, int right);
@@ -26,7 +26,7 @@ int *bubbleSort(int *arr, int size);
 
 
 void sortCallEntry(void);
-int *readArray(void);
+int *readArray(int *arrySize);
 void printArray(int *arr, int size);
 void swapTwo(int *a, int *b);
 #endif /* Sort_h */

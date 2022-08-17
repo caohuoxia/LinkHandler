@@ -24,13 +24,17 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
+    printf("13级台阶： %d\n", jumpFloor3(13));
+    return 0;
+    
     printf("Hello, World!\n");
 //    callMyMergeLink();
-//    int heights[] = {1,8,6,2,5,4,8,3,7};
+    int heights[] = {1,-2,3,10,-4,7,2,-5};
 //    // c语言里 求数组长度
-//    int size = sizeof(heights)/sizeof(int);
-//    int ret = maxWaterArea(heights, size);
-//    printf("最大储水量为：%d\n",ret);
+    int size = sizeof(heights)/sizeof(int);
+    int retSize = 0;
+    int *ret = maxLongSubArr(heights, 8, &retSize);
+    printArray(ret, retSize);
     
 //    int shares[] = {7,1,5,3,6,4};
 //    // c语言里 求数组长度
@@ -47,6 +51,6 @@ int main(int argc, const char * argv[]) {
 //    deleteNode(head, toDelete);
 //    deleteDup(head);
 //    display_link(head);
-    sortCallEntry();
+//    sortCallEntry();
     return 0;
 }

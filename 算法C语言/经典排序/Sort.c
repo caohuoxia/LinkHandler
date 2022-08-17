@@ -48,25 +48,28 @@ int *bubbleSort(int *arr, int size) {
 
 #pragma mark-  public method
 void sortCallEntry(void) {
-//    int *arr = readArray();
+    int size = 0;
+    int *arr = readArray(&size);
     // bubble里面也没问题，为什么quicksort里面 read就出错呢。不read硬编码也没问题 奇怪！！！
-//    int *p = bubbleSort(arr, ArrayLength);
+    int *p = bubbleSort(arr, size);
 //    int *p = quickSort(arr, 0, ArrayLength-1);
-    int a[6] = {9,3,1,5,7,2};
-    quickSort(a, 0, 5);
-    printf("排序后的数组：\n");
-    printArray(a, 6);
+//    int a[6] = {9,3,1,5,7,2};
+//    quickSort(a, 0, 5);
+//    printf("排序后的数组：\n");
+    printArray(arr, size);
 }
 
 // 从终端读取数组 （指针函数 重点是函数，函数指针 是指针 只不过是指向函数的指针）
-int *readArray(void) {
+int *readArray(int *arrySize) {
+    int num = 0;
     printf("输入数组长度(小于20)：\n");
-    scanf("%d", &ArrayLength);
+    scanf("%d", &num);
+    *arrySize = num;
     // 法一：数组 此时不需要释放
-    int arr[ArrayLength];
+    int arr[num];
     int *p = arr;
 //    int *arr = (int*)malloc(sizeof(int)*ArrayLength); // 法二：动态申请内存，注意适时释放
-    for (int i=0; i<ArrayLength;i++) {
+    for (int i=0; i<num;i++) {
         scanf("%d",&arr[i]);
     }
     return p;
