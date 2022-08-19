@@ -28,7 +28,83 @@ int maxProfit(int *shares, int size) {
     }
     return ret;
 }
-
+#pragma mark-  打印1到最大的n位数，如 输入3，则打印出1,2,3 一直到最大的三位数999
+int* printNumbers(int n, int* returnSize ) {
+    // write code here
+    if(n>5) {
+        printf("n 小于等于5，请重新输入");
+        return NULL;
+    }
+    int max = 9;
+    if(n == 1) {
+        max = 9;
+    }else if(n == 2) {
+        max = 99;
+    }else if(n==3) {
+        max = 999;
+    }else if(n==4) {
+        max = 9999;
+    }else {
+        max = 99999;
+    }
+    int *temp = (int*)malloc(sizeof(int)*max);
+    for(int i=1,j=0;i<=max;i++) {
+        printf("%d ",i);
+        temp[j++] = i;
+    }
+    return temp;
+}
+// 其实大概思路是一样的 只是最大位数进一，类似最大3位数是999 也即1000-1
+static int a[100000];
+int* printNumbers1(int n, int* returnSize) {
+    if (n>5) {
+        printf("请输入小于等于5的数");
+        return NULL;
+    }
+    int k = 1;
+    for (int i=0; i<n; i++) {
+        k*=10;
+    }
+    *returnSize = k-1;
+    for (int j=1; j<k; j++) {
+        a[j-1]=j;
+    }
+    return a;
+}
+#pragma mark- 找出数组中重复元素 返回任意重复元素即可
+int findDuplicateNum(int *arr, int size) {
+    // 方法一：暴力法
+    int *temp = (int*)malloc(sizeof(int)*size);
+    for (int i=0; i<size; i++) {
+        for (int j=0; j<i; j++) {
+            if (arr[i] == temp[j]) {
+                return temp[j];
+            }
+        }
+        temp[i] = arr[i];
+    }
+    free(temp);
+    temp = NULL;
+    return -1;
+}
+// {4,3,2,1,1,0}
+int findDuplicateNum2(int *arr, int size) {
+    // 方法二：数据重排
+    int i = 0, end = size - 1;
+    while (i<end) {
+        if (arr[i] == i) { // 在正确位置上，已经是排好序的
+            i++;
+            continue;
+        }else {
+            if (arr[i] == arr[arr[i]]) {
+                return arr[i];
+            }else {
+                swapTwo(&arr[i], &arr[arr[i]]);
+            }
+        }
+    }
+    return -1;
+}
 #pragma mark- 子数组最大和
 // 求子数组最大和，第一眼看到题 可能觉得题有问题，求和肯定是整个都加起来大啊，其实不然 因为该数组元素是-100~100之间，so才会有子数组最大这么一说
 int maxSubArrSum(int *arr, int size) {

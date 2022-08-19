@@ -24,10 +24,13 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("13级台阶： %d\n", jumpFloor3(13));
+//    sortCallEntry();
+    int len = 0;
+//    int *t = readArray(&len);
+    int *p = printNumbers1(3, &len);
+    printArray(p, len);
     return 0;
     
-    printf("Hello, World!\n");
 //    callMyMergeLink();
     int heights[] = {1,-2,3,10,-4,7,2,-5};
 //    // c语言里 求数组长度

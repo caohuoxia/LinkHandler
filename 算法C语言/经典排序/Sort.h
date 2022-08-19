@@ -21,9 +21,10 @@
 //  全局存储数组的长度 或者用入参 带出size，此时注意要用指针
 static int ArrayLength = 0;
 
-//int *quickSort(int *arr, int left, int right);
+void quickSort(int *arr, int left, int right);
 int *bubbleSort(int *arr, int size);
-
+void selectSort(int *arr, int size);
+void insertSort(int *arr, int size);
 
 void sortCallEntry(void);
 int *readArray(int *arrySize);
