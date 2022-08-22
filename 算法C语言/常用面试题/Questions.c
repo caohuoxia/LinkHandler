@@ -28,6 +28,7 @@ int maxProfit(int *shares, int size) {
     }
     return ret;
 }
+
 #pragma mark- 反转单词序列 例如： iOSCoder. a am I  ->  I am a iOSCoder.
 // 思路： 利用栈先进后出的特点  中间构建一个临时stack来转化  从尾部遍历到首部
 char *reverseSentence(char *str) {

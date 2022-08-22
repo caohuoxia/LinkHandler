@@ -11,6 +11,7 @@
 		EE38CF9728A9E37F008E7266 /* HX_Link.c in Sources */ = {isa = PBXBuildFile; fileRef = EE38CF9628A9E37F008E7266 /* HX_Link.c */; };
 		EE38CF9C28A9E80E008E7266 /* Questions.c in Sources */ = {isa = PBXBuildFile; fileRef = EE38CF9B28A9E80E008E7266 /* Questions.c */; };
 		EE38CF9F28AB29FA008E7266 /* Sort.c in Sources */ = {isa = PBXBuildFile; fileRef = EE38CF9E28AB29FA008E7266 /* Sort.c */; };
+		EE38CFA228B35ED6008E7266 /* StackToQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = EE38CFA128B35ED6008E7266 /* StackToQueue.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		EE38CF9B28A9E80E008E7266 /* Questions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Questions.c; sourceTree = "<group>"; };
 		EE38CF9D28AB29FA008E7266 /* Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sort.h; sourceTree = "<group>"; };
 		EE38CF9E28AB29FA008E7266 /* Sort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Sort.c; sourceTree = "<group>"; };
+		EE38CFA028B35ED6008E7266 /* StackToQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackToQueue.h; sourceTree = "<group>"; };
+		EE38CFA128B35ED6008E7266 /* StackToQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackToQueue.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			children = (
 				EE38CF9A28A9E80E008E7266 /* Questions.h */,
 				EE38CF9B28A9E80E008E7266 /* Questions.c */,
+				EE38CFA028B35ED6008E7266 /* StackToQueue.h */,
+				EE38CFA128B35ED6008E7266 /* StackToQueue.c */,
 			);
 			path = "常用面试题";
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			files = (
 				EE38CF8C28A9E257008E7266 /* main.c in Sources */,
 				EE38CF9728A9E37F008E7266 /* HX_Link.c in Sources */,
+				EE38CFA228B35ED6008E7266 /* StackToQueue.c in Sources */,
 				EE38CF9C28A9E80E008E7266 /* Questions.c in Sources */,
 				EE38CF9F28AB29FA008E7266 /* Sort.c in Sources */,
 			);

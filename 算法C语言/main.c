@@ -20,9 +20,13 @@
 #include <stdio.h>
 #include "HX_Link.h"
 #include "./常用面试题/Questions.h"
+#include "./常用面试题/StackToQueue.h"
 #include "./经典排序/Sort.h"
 
 int main(int argc, const char * argv[]) {
+    
+    callStackToQueue();
+    return 0;
     
     char *str = "iOSCoder. a am I Hello,";
     printf("%s\n", reverseSentence(str));
