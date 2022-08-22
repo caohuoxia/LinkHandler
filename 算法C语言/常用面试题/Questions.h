@@ -44,5 +44,6 @@ int* printNumbers(int n, int* returnSize);
 int* printNumbers1(int n, int* returnSize);
 
 char *replaceSace(char *str);
-char *replaceSace1(char *str);
+
+char *reverseSentence(char *str);
 #endif /* Questions_h */

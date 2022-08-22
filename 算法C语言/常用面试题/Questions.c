@@ -28,7 +28,32 @@ int maxProfit(int *shares, int size) {
     }
     return ret;
 }
-
+#pragma mark- 反转单词序列 例如： iOSCoder. a am I  ->  I am a iOSCoder.
+// 思路： 利用栈先进后出的特点  中间构建一个临时stack来转化  从尾部遍历到首部
+char *reverseSentence(char *str) {
+    int len = (int)strlen(str), end = len-1;
+    char *stack = (char*)malloc(sizeof(char)*(len+1));
+    char *ret = (char*)malloc(sizeof(char)*(len+1));
+    int top = 0, j = 0;
+    // 倒叙遍历原字符串
+    while (end>=0) {
+        if (str[end] != ' ') {
+            stack[top++] = str[end]; // 不是空格 将单词入栈
+        }else {
+            while (top>0) {
+                ret[j++] = stack[--top];
+            }
+            ret[j++] = ' ';
+        }
+        end--;
+    }
+    // 当end==0时 单词的最后一个字母或者是标点符号入栈，但未保存到ret数组中。so单独处理下
+    while (top>0) {
+        ret[j++] = stack[--top];
+    }
+    ret[j] = '\0';
+    return ret;
+}
 #pragma mark- 替换字符串中的空格
 char *replaceSace(char *str) {
     int len = (int)strlen(str), spaceCount = 0;

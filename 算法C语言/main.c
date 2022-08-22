@@ -24,8 +24,8 @@
 
 int main(int argc, const char * argv[]) {
     
-    char *str = "Hello you are ok?";
-    printf("%s\n", replaceSace(str));
+    char *str = "iOSCoder. a am I Hello,";
+    printf("%s\n", reverseSentence(str));
     return 0;
 //    sortCallEntry();
     int len = 0;
