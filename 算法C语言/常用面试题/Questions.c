@@ -28,6 +28,31 @@ int maxProfit(int *shares, int size) {
     }
     return ret;
 }
+
+#pragma mark- 替换字符串中的空格
+char *replaceSace(char *str) {
+    int len = (int)strlen(str), spaceCount = 0;
+    // 空格的总数量
+    for (int i=0; i<len; i++) {
+        if (str[i] == ' ') {
+            spaceCount++;
+        }
+    }
+    // 动态申请新数组空间
+    char *temp = (char*)malloc(sizeof(char)*(len+3*spaceCount+1));
+    for (int i=0,j=0; i<len; i++,j++) {
+        if(str[i] == ' ') {
+            temp[j] = '%';
+            temp[j+1] = '2';
+            temp[j+2] = '0';
+            j = j+2; // 与i保持同步 主要是这里
+        }else {
+            temp[j] = str[i]; // 注意是temp[j] 不是temp[i]
+        }
+    }
+    return temp;
+}
+
 #pragma mark-  打印1到最大的n位数，如 输入3，则打印出1,2,3 一直到最大的三位数999
 int* printNumbers(int n, int* returnSize ) {
     // write code here

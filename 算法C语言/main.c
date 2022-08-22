@@ -23,7 +23,10 @@
 #include "./经典排序/Sort.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    
+    char *str = "Hello you are ok?";
+    printf("%s\n", replaceSace(str));
+    return 0;
 //    sortCallEntry();
     int len = 0;
 //    int *t = readArray(&len);

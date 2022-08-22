@@ -19,6 +19,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "../经典排序/Sort.h"
 
 // 注意第一个a和b不需要括号
@@ -41,4 +42,7 @@ int findDuplicateNum2(int *arr, int size);
 
 int* printNumbers(int n, int* returnSize);
 int* printNumbers1(int n, int* returnSize);
+
+char *replaceSace(char *str);
+char *replaceSace1(char *str);
 #endif /* Questions_h */
